@@ -757,7 +757,7 @@ onReplicatorReady: (nullable void (^)(CBLReplicator*))onReplicatorReady
         id token = [r addChangeListener: ^(CBLReplicatorChange *change) {
             [wSelf verifyChange: change errorCode: 0 errorDomain: nil];
             int whenValue = [when intValue];
-            if (change.status.activity == whenValue) {
+            if ((int) change.status.activity == whenValue) {
                 NSLog(@"****** Stop Replicator (when %@) ******", activities[whenValue]);
                 [change.replicator stop];
             } else if (change.status.activity == kCBLReplicatorStopped) {

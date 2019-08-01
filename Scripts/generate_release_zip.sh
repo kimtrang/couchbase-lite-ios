@@ -61,7 +61,7 @@ else
   COVERAGE_NAME="coverage-ee"
   EDITION="enterprise"
   EXTRA_CMD_OPTIONS="--EE"
-  TEST_SIMULATOR="platform=iOS Simulator,name=iPhone X"
+  TEST_SIMULATOR="platform=iOS Simulator,name=iPhone Xs"
 fi
 
 if [ -z "$PRETTY" ]
